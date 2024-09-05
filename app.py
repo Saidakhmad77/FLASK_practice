@@ -1,6 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+import json
 
 app = Flask(__name__)
+
+def get_countries():
+    with open("countries.json", 'r') as file:
+        countries_data = json.load(file)
+    return countries_data
+"""     return json.loads(countries_data) """
 
 @app.route('/')
 def hello_world():
@@ -26,5 +33,22 @@ def goodbye():
 def create_title():
     return '<p>Title page</p>'
 
+
+@app.route("/countries")
+def get_country_html():
+    countries = get_countries()
+    print(countries)
+    return render_template("countries.html", countries=countries)
+
+
+@app.route("/api/countries")
+def get_country():
+    countries = get_countries()
+    return jsonify(countries)
+
+
 if __name__=="__main__":
     app.run(debug=True, port=8080)
+    
+    
+    
