@@ -25,3 +25,6 @@ def goodbye():
 
 def create_title():
     return '<p>Title page</p>'
+
+if __name__=="__main__":
+    app.run(debug=True, port=8080)

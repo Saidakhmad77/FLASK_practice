@@ -3,41 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Home Page</title>
+    <title>TravelMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to external stylesheet -->
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">MyWebsite</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Welcome to MyWebsite</h1>
-            <p>Your one-stop solution for web design and development.</p>
-            <a href="#services" class="cta-button">Learn More</a>
+    <nav>
+        <div class="logo">TravelMate</div> <!-- Logo -->
+        <div class="social-icons">
+            <a href="https://www.facebook.com/share/CyQz539hXZ3oCxEi/?mibextid=LQQJ4d" target="_blank">
+                <img src="{{ url_for('static', filename='images/facebook1.jpg') }}" alt="Facebook">
+            </a> <!-- Facebook icon link -->
+            <a href="https://www.instagram.com/_saidakhmad__?igsh=eG5qbTQzaGIxcDU0&utm_source=qr" target="_blank">
+                <img src="{{ url_for('static', filename='images/insta.jpg') }}" alt="Instagram">
+            </a> <!-- Instagram icon link -->
+            <a href="https://www.linkedin.com/in/saidahmad-nuriddinov-ba892b211?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                <img src="{{ url_for('static', filename='images/linkedIn.png') }}" alt="LinkedIn">
+            </a> <!-- LinkedIn icon link -->
         </div>
-    </section>
-
-    <section class="content">
-        <h2 id="about">About Us</h2>
-        <p>We are a team of passionate developers and designers who create beautiful and functional websites.</p>
-        
-        <h2 id="services">Our Services</h2>
-        <p>We offer a wide range of services including web design, development, SEO, and more.</p>
-    </section>
-
-    <footer id="contact">
-        <p>Contact us at: info@mywebsite.com</p>
-        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
-    </footer>
+    </nav>
+    <div class="section" id="section1">
+        <div class="content">
+            <h1>Adventure Awaits</h1>
+            <p>Unleash Your Inner Explorer</p>
+            <button>Get Inspired</button> <!-- Button to get inspired -->
+        </div>
+    </div>
+    <div class="section" id="section2">
+        <div class="content">
+            <h2>Travel Stories</h2>
+            <div class="stories">
+                <div class="story">
+                    <a href="#cebu-anchor">
+                        <img src="{{ url_for('static', filename='images/cebu1.jpg') }}" alt="Cebu">
+                        <div class="text-overlay">
+                            <h3>Discover More About Cebu</h3>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="story">
+                    <a href="#hanoi-anchor">
+                        <img src="{{ url_for('static', filename='images/hanoi.jpg') }}" alt="Hanoi">
+                        <div class="text-overlay">
+                            <h3>Discover More About Hanoi</h3>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="story">
+                    <a href="#sapa-anchor">
+                        <img src="{{ url_for('static', filename='images/sapa4.jpg') }}" alt="SaPa">
+                        <div class="text-overlay">
+                            <h3>Explore Mountains of Sa Pa</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h2 id="Cebu">Cebu</h2><span class="anchor" id="cebu-anchor"></span>
+                <p>
+                    Cebu is the hub around which the Visayas revolve. It is the most densely populated island in the Philippines and is
+                    second only to Luzon in its strategic and economic importance to the country. This is one of the most prosperous regions 
+                    in the country – the 2016 growth rate was 8.8%, considerably higher than the national average. Tourism numbers are booming, 
+                    Cebu draws almost two million foreign travellers a year. The island's prime attractions are its white-sand beaches and spectacular
+                    diving, chiefly off the northern tip of Cebu at Malapascua and down on the southwest coast at Moalboal. And don't ignore 
+                    much-maligned Cebu City, which has lively bars, emerging eateries and burgeoning retail appeal.
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <h2 id="Hanoi">Hanoi</h2><span class="anchor" id="hanoi-anchor"></span>
+                <p>
+                    Hanoi, the capital of Vietnam, is one of the most ancient cities in the world. This place offers examples of both contemporary
+                    and classical architecture right in the city center. A renowned destination for typical cuisine, home to fascinating attractions
+                    and hospitable people, and a diverse region with a combination of multi-communities. There is plenty to enjoy in Hanoi, from
+                    mouthwatering street food to fascinating history, from traditional entertainment to recreational activities. Even with a short
+                    amount of time, you can still feel the tranquilness of the city while sipping a cup of coffee. Wandering around and shooting 
+                    artistic photos on elegant streets in the Old Quarter would give you unique experiences that are hardly found anywhere else. 
+                    Outside the suburban areas, you can discover small charming villages which are homes to so many ethnic minorities.
+                </p>
+            </div>
+            
+            <div class="info-section">
+                <h2 id="SaPa">Sa Pa</h2><span class="anchor" id="sapa-anchor"></span>
+                <p>
+                    Sapa town stands at the head of a deep valley of magnificent rice terraces that are still farmed today as they have been for 
+                    centuries. Backdrops don’t get much more spectacular. Enticing ribbons of road lead the eye down to the valley floor, white-water
+                    rivers rush among rice fields, and lush green mountains stretch into the distance as far as the eye can see. The highest peak in
+                    the region, Mount Fansipan, crowns the ragged ridge line high above town.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section3">
+        <div class="content">
+            <h2>Discover More</h2>
+            <div class="gallery">
+                <a class="google" href="https://info.myboracayguide.com/boracay-sunset/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/boracay2.jpg') }}" alt="boracay-sunset">
+                </a> <!-- Image for Gallery 1 -->
+                <a class="google" href="https://www.discoverthephilippines.com/boracays-white-beach/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/boracay1.jpg') }}" alt="boracays-white-beach">
+                </a> <!-- Image for Gallery 2 -->
+                <a class="google" href="https://north-vietnam.com/train-cable-car-sapa-to-fansipan/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/sapa1.jpg') }}" alt="train-cable-car-sapa-to-fansipan">
+                </a> <!-- Image for Gallery 3 -->
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="content">
+            <h2>Join Our Community</h2>
+            <form>
+                <input type="email" placeholder="Your Email *"> <!-- Email input field -->
+                <button type="submit">Join</button> <!-- Join button -->
+            </form>
+        </div>
+    </div>
 </body>
 </html>

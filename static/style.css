@@ -1,168 +1,351 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Global styles */
+* {
     margin: 0;
     padding: 0;
-    color: #ffffff;
-    background-color: #1a1a2e;
-    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Set default font family */
 }
 
-/* Header and Navigation */
-header {
-    background-color: #16213e;
-    color: #e94560;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+/* Body styles */
+body {
+    height: 100px; /* Example height  */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    line-height: 1.6; /* Line height for readability */
+    background-image: url('/static/images/cebu2.jpg'); /* Background image */
+    background-size: cover; /* Cover background */
+    background-position: center; /* Center background image */
+    background-repeat: no-repeat; /* No repeating background */
+    color: #fff; /* Text color for better contrast */
 }
 
+/* Navigation styles */
 nav {
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #3e3e3e; /* Background color */
+    color: white; /* Text color */
+    position: fixed; /* Fixed positioning */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Z-index for stacking */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for navbar */
 }
 
-.logo {
-    font-size: 2rem;
+nav .logo {
+    font-size: 1.5em;
     font-weight: bold;
-    color: #e94560;
+    cursor: pointer; /* Cursor style */
 }
 
-.nav-links {
-    list-style: none;
+nav .social-icons {
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Gap between social icons */
 }
 
-.nav-links li a {
-    color: #e94560;
+nav .social-icons a {
+    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s; /* Transition effect */
 }
 
-.nav-links li a:hover {
-    background-color: #0f3460;
-    color: #ffffff;
+nav .social-icons a:hover {
+    transform: scale(1.1); /* Scale on hover */
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
-    height: 600px;
+nav .social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(8px 8px 10px rgb(229, 103, 44)); /* Icon shadow */
+    border-radius: 50%; /* Circular icons */
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+/* Section styles */
+.section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #ffffff;
+    justify-content: center;
     text-align: center;
     padding: 20px;
-    margin-top: 60px; /* Adjust for fixed header */
+    margin-top: 60px; /* Compensate for fixed navbar */
 }
 
-.hero-content {
-    max-width: 700px;
-    background: rgba(28, 28, 36, 0.8);
-    padding: 30px;
-    border-radius: 10px;
+/* Section 1 specific styles */
+#section1 {
+    background: url('/website/cebu2.jpg') no-repeat center center/cover; /* Background image */
+    color: white; /* Text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 90rem;
+    min-height: 200px;
+    max-height: 400px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
+#section1 h1 {
+    font-size: 3em;
     margin-bottom: 20px;
-    color: #f5f5f5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
-.hero p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-    color: #dcdde1;
+#section1 p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
-.cta-button {
-    display: inline-block;
+#section1 button {
     padding: 15px 30px;
-    background-color: #e94560;
-    color: #ffffff;
-    text-decoration: none;
+    font-size: 1em;
+    color: white;
+    background-color: #6200ea; /* Button background color */
+    border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition effect */
 }
 
-.cta-button:hover {
-    background-color: #0f3460;
-    transform: scale(1.05);
+#section1 button:hover {
+    background-color: #3700b3; /* Button background color on hover */
 }
 
-/* Content Section */
-.content {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #16213e;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin-top: -30px; /* Overlapping effect */
-    position: relative;
-    z-index: 10;
+/* Other sections */
+#section2, #section3, #section4 {
+    background: #ffffff; /* Background color */
+    color: #333; /* Text color */
+    padding: 50px 20px;
 }
 
-.content h2 {
-    font-size: 2.4rem;
+#section2 .content, #section3 .content, #section4 .content {
+    max-width: 1000px; /* Max width of content */
+    margin: auto; /* Center content */
+    text-align: left;
+}
+
+div.gallery {
+    width:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex: row;
+}
+
+.google {
+    width: 200px;
+}
+
+/* Stories and gallery styles */
+.stories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between stories */
+}
+
+.story a {
+    display: block;
+    max-width: 100%;
+}
+
+/* Styling for the text overlay */
+.story .text-overlay {
+    position: absolute; /* Positioned relative to parent (.story) */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding inside the overlay */
+    border-radius: 8px; /* Rounded corners */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+/* Fade in the text overlay on hover */
+.story:hover .text-overlay {
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* Styling for the heading within the text overlay */
+.story h3 {
+    margin-top: 10px; /* Space above the heading */
+    font-size: 18px; /* Font size of the heading */
+}
+
+.story {
+    max-width: 400px; /* Max width of story */
+    width: 100%;
+}
+
+.stories {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    color: #e94560;
 }
 
-.content p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #dcdde1;
-}
-
-/* Footer */
-footer {
-    background-color: #0f3460;
-    color: #f5f5f5;
+.story {
+    position: relative;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    border-top: 2px solid #e94560;
+    margin-bottom: 20px;
 }
 
-footer p {
-    margin: 5px 0;
-    color: #dcdde1;
+/* .story img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+
+.story .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-/* Responsive Design */
+.story:hover .text-overlay {
+    opacity: 0.3s;
+}
+
+.story h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.info-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.info-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.stories, .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap:nowrap;
+    gap: 20px; /* Gap between items */
+}
+
+.story img {
+    width: 100%;
+    object-fit: cover;
+    flex: row;
+    border-radius: 10px; /* Border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.story:hover, img:hover {
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.gallery img {
+    width: 100%; /* Width of story/gallery items */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.story:hover, .gallery img:hover {
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.story h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px; /* Max width of form elements */
+    font-size: 1em;
+}
+
+form input {
+    border: 1px solid #ddd; /* Input border */
+}
+
+form button {
+    background-color: #6200ea; /* Button background color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+form button:hover {
+    background-color: #3700b3; /* Button background color on hover */
+}
+
+/* Media queries for responsive design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
+    .stories, .gallery {
+        flex-direction: column; /* Stack items vertically on small screens */
     }
 
-    .hero p {
-        font-size: 1.2rem;
+    .story, .gallery img {
+        width: 80%; /* Adjust width of items */
     }
 
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1rem;
+    .content {
+        padding: 10px; /* Adjust padding */
     }
 
-    nav {
-        flex-direction: column;
+    h1, h2, h3 {
+        font-size: 1.5em; /* Adjust heading font size */
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
+    p, button, input {
+        font-size: 1em; /* Adjust text and input font size */
+    }
+
+    nav .logo {
+        font-size: 1.2em; /* Adjust logo font size */
+    }
+
+    nav .social-icons img {
+        width: 20px;
+        height: 20px; /* Adjust social icon size */
     }
 }
 
+.anchor {
+    position: absolute;
+    transform: translateY(-30vh);
+}
